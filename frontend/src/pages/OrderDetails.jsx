@@ -118,6 +118,8 @@ const OrderDetails = () => {
       setOrder(response.data.order);
 
       alert("Order updated successfully!");
+      // Refresh order details
+      await getOrderDetails();
     } catch (err) {
       console.log(err);
       alert("Failed to update order.");
