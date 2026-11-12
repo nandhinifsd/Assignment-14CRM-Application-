@@ -8,7 +8,8 @@ async function dbConnect()
     catch(err)
     {
         console.error("Db connection err: ",err.message);
-        process.exit(1);
+        //process.exit(1);
+        throw err;
     }
 };
 
