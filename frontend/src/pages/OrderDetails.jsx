@@ -42,7 +42,7 @@ const OrderDetails = () => {
       return imagePath;
     }
 
-    return `http://localhost:6500/${imagePath.replace(/^\/+/, "")}`;
+    return `https://assignment-14crm-application-backen.vercel.app/${imagePath.replace(/^\/+/, "")}`;
   };
 
   // Get order details
