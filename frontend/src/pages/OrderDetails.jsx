@@ -42,7 +42,8 @@ const OrderDetails = () => {
       return imagePath;
     }
 
-    return `https://assignment-14crm-application-backen.vercel.app/${imagePath.replace(/^\/+/, "")}`;
+    return `https://assignment-14crm-application-backen.vercel.app/
+    ${imagePath.replace(/^\/+/, "")}`;
   };
 
   // Get order details

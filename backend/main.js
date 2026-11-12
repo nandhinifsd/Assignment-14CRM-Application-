@@ -4,8 +4,8 @@ const app=express();
 
 require("dotenv").config();
 const cors=require("cors");
-//const path = require("path");
-//app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+const path = require("path");
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const userRouter=require("./router/user.router");
 const productRouter=require("./router/product.router");
