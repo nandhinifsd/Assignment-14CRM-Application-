@@ -102,8 +102,9 @@ const OrderDetails = () => {
   }
 
   // Update order
-  async function updateOrder() {
+  async function updateOrder(e) {
     try {
+          e.preventDefault();
       const response = await api.put(
         `/orders/update/${id}`,
         {
@@ -171,7 +172,7 @@ const OrderDetails = () => {
       alert("Customer Updated successfully!");
     }
 
-    if(address!="" && updateCustomerEmail)
+    if(address!="" && updateCustomerAddress)
       {
       const response = await api.put(
         `/customers/update/${customer._id}`,
