@@ -42,8 +42,7 @@ const OrderDetails = () => {
       return imagePath;
     }
 
-    return `https://assignment-14crm-application-backen.vercel.app/
-    ${imagePath.replace(/^\/+/, "")}`;
+    return `https://assignment-14crm-application-backen.vercel.app/${imagePath.replace(/^\/+/, "")}`;
   };
 
   // Get order details
@@ -299,7 +298,7 @@ const OrderDetails = () => {
                         <td className="p-4">
                           <div className="flex items-center justify-center">
                             <img
-                              src={getImageUrl(product?.productImage)}
+                              src={product?.productImage}
                               alt="Product"
                               className="h-20 w-20 object-contain"
                             />

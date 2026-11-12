@@ -69,6 +69,17 @@ const completedOrders = orders.filter(
   order => order.status === "completed"
 );
    
+
+// Convert relative image paths into complete URLs
+  const getImageUrl = (imagePath) => {
+    if (!imagePath) return "";
+
+    if (imagePath.startsWith("http")) {
+      return imagePath;
+    }
+
+    return `https://assignment-14crm-application-backen.vercel.app/${imagePath.replace(/^\/+/, "")}`;
+  };
 useEffect(()=>
 {
 getCustomerDetails();
@@ -169,7 +180,7 @@ getCustomerDetails();
                                 </div>
                                 <div className="justify-center items-center ">
           <img
-            src={item.designImage} alt={`Design for ${order._id}`} className="w-32 h-32 object-contain mt-3 rounded-lg shadow-lg"
+            src={getImageUrl(item.designImage)} alt={`Design for ${order._id}`} className="w-32 h-32 object-contain mt-3 rounded-lg shadow-lg"
           /></div>
                          
                          </div>
